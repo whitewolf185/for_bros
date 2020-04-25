@@ -8,31 +8,37 @@
 По умолчанию используется int
 
 # vector description
-## create(vector* v,int size)
+### create(vector* v, int size)
 Для начала нужно создать этот вектор. 
 Синтаксис такой:
 ```c
 create(&v,0); // 0 здесь размер vector. Вы также можете вбить любое другое число.
 ```
 
-## push_back(vector* v, const T x)
+### push_back(vector* v, const T x)
 Затем можно добавлять файлы в конец списка.
 ```c
 push_back(&v,x);
 ```
-## pop(vector* v)
+### pop(vector* v)
 Удаляет последний элемент vector
 ```c
 pop(&v);
 ```
-## print_all(vector* v)
+### print_all(vector* v)
 Пишет в консоль весь vector
 ```c
 print_all(&v);
 ```
 Здесь в файле vector.h, чтобы использовать другой тип данных, нужно в printf поменять формат вывода
 
-## destroy(vector* v)
+### int size(vector* v)
+Возвращает размер вектора
+```c
+int size = size(&v);
+```
+
+### destroy(vector* v)
 Удаляет vector
 ```c
 destroy(&v);
