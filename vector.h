@@ -39,4 +39,12 @@ void print_all(vector* v){
     }
     printf("\n");
 }
+
+int size(vector *v){
+    return v->size;
+}
+
+void destroy(vector *v){
+    free(v);
+}
 #endif
