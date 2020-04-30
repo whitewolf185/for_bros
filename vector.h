@@ -8,6 +8,7 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 #include "stdlib.h"
+#include "stdio.h"
 
 typedef struct vector{
     int* data;//тут надо подправить тип
