@@ -40,10 +40,11 @@ list prev(list m, list iter){
 list delete(list m, list iter){
     list mm = m;
     if(m== iter){
-        m->next->prev = m->prev;
-        m = m->next;
+        mm = m->next;
+        mm->prev = m->prev;
+        mm->prev->next = mm;
         free(iter);
-        return m;
+        return mm;
     }
     while(m->next != iter){
         m=m->next;
