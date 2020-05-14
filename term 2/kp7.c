@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define START_SIM
-//#define DEBUG
+#define DEBUG
 #define START_SUM
 typedef struct val{
     int i;
