@@ -18,8 +18,8 @@ typedef struct vector{
 void create (vector *v, int size){
     v-> data = (int *) malloc(sizeof(int) * size);//тут надо подправить тип
     v->size = size;
-    for (int i = 0; i < size; ++i) {
-        v->data[i] = '\0';
+    for (int i = 0; i < size; ++i) { //если используете в виде данных структуру, желательно убрать этот for или
+        v->data[i] = '\0';           //сделать свою инициализацию
     }
 }
 
@@ -42,11 +42,14 @@ void print_all(vector* v){
 }
 
 int size(vector *v){
+    if(v == NULL){
+        return 0;
+    }
     return v->size;
 }
 
 void destroy(vector *v){
     v->size = 0;
-    //free(v);
+    free(v->data);
 }
 #endif
